@@ -1,0 +1,4 @@
+ceph_conf_overrides:
+  "client.rgw.{{ hostvars[inventory_hostname]['ansible_hostname'] }}":
+  rgw enable static website = {{ radosgw_static_website }}
+  rgw dns s3website name = {{ radosgw_dns_s3website_name }}

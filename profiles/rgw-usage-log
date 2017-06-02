@@ -1,0 +1,8 @@
+ceph_conf_overrides:
+  "client.rgw.{{ hostvars[inventory_hostname]['ansible_hostname'] }}":
+  rgw enable usage log = true
+  rgw usage log tick interval = {{ radosgw_usage_log_tick_interval }}
+  rgw usage log flush threshold = {{ radosgw_usage_log_flush_threshold }}
+  rgw usage max shards = {{ radosgw_usage_max_shards }}
+  rgw usage max user shards = {{ radosgw_usage_max_user_shards }}
+
